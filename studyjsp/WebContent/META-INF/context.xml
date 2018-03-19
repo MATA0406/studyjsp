@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+	<Resource name="jdbc/myOracle" auth="Container"
+		driverClassName="oracle.jdbc.driver.OracleDriver" type="javax.sql.DataSource"
+		url="jdbc:oracle:thin:@localhost:1521:xe" username="wlsgh46" password="1234"
+		maxTotal="20" maxIdle="10" maxWaitMillis="-1" /> <!-- 커넥션을 최대 20개 최소 10개 음수로 하면 바로 처리 -->
+</Context>
