@@ -71,7 +71,7 @@ $(document).ready(function(){
 					// 회원 탈퇴 페이지 deletePro.jsp 실행
 					$.ajax({
 						type : "post",
-						url : "memberCheck.jsp",
+						url : "deletePro.jsp",
 						data : query,
 						success : function(data){
 							if(data == 1){ // 탈퇴 성공

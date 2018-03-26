@@ -2,6 +2,8 @@
  * 
  */
 
+var status = true;
+
 $(document).ready(function(){
 	// [회원 가입] 버튼을 클릭하면 자동실행
 	$("#register").click(function(){ // [회원 가입] 버튼 클릭
@@ -16,17 +18,20 @@ $(document).ready(function(){
 		checkIt(); // 입력 폼에 입력한 상황 체크
 		if(status){
 			// 입력된 사용자의 아이디와 비밀번호를 얻어냄
-			var query = { id : $("#id").val(),
-					passwd : $("#passwd").val()};
+			var query = { 
+					id : $("#id").val(),
+					passwd : $("#passwd").val()
+			};
 				
 			$.ajax({
 				type : "post",
 				url : "loginPro.jsp",
 				data : query,
 				success : function(data){
-					if(data == 1) // 로그인 성공
+					if(data == 1){ // 로그인 성공
 						$("#main_auth").load("loginForm.jsp");
-					else if(data == 0){ // 비밀번호 틀림
+						$("#main_board").load("list.jsp");
+					}else if(data == 0){ // 비밀번호 틀림
 						alert("비밀번호가 맞지 않습니다.");
 						$("#passwd").val("");
 						$("#passwd").focus();
@@ -41,13 +46,6 @@ $(document).ready(function(){
 		}
 	});
 	
-	// 인증된 사용자 영역을 처리하는 버튼들
-	// [회원 정보 변경] 버튼을 클릭하면 자동 실행
-	$("#update").click(function(){ // [회원정보수정] 버튼 클릭
-		// 회원 정보 수정 및 회원 탈퇴를 위한 modify.jsp 페이지 요청
-		$("#main_auth").load("modify.jsp");
-	});
-	
 	// [로그아웃] 버튼을 클릭하면 자동 실행
 	// logout.jsp 페이지를 실행
 	$("#logout").click(function(){// [회원정보수정] 버튼 클릭
@@ -56,10 +54,12 @@ $(document).ready(function(){
 			url : "logout.jsp",
 			success : function(data){
 				$("#main_auth").load("loginForm.jsp");
+				$("#main_board").html("로그인하세요! 게시판은 회원만 볼 수 있습니다.");
 			}
 		});
-	});
+	});	
 });
+	
 
 // 인증되지 않은 사용자 영역에서 사용하는 입력 폼의 입려값 폼의 입력값 유무 확인
 function checkIt(){
@@ -78,3 +78,11 @@ function checkIt(){
 		return false;
 	}
 }
+
+//인증된 사용자 영역을 처리하는 버튼들
+// [회원 정보 변경] 버튼을 클릭하면 자동 실행
+$("#update").click(function(){ // [회원정보수정] 버튼 클릭
+	// 회원 정보 수정 및 회원 탈퇴를 위한 modify.jsp 페이지 요청
+	$("#main_auth").load("modify.jsp");
+
+});

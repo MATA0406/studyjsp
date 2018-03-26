@@ -12,7 +12,7 @@ public class BoardDataBean {
     private int readcount;  //조회수
     private String ip; // ip주소
     private int ref; // 글의 그룹 번호
-    private int ref_step ; // 제목글과 답변글의 순서
+    private int re_step ; // 제목글과 답변글의 순서
     private int re_level; // 글 제목의 들여쓰기 순서
 	
     public int getNum() {
@@ -69,11 +69,11 @@ public class BoardDataBean {
 	public void setRef(int ref) {
 		this.ref = ref;
 	}
-	public int getRef_step() {
-		return ref_step;
+	public int getRe_step() {
+		return re_step;
 	}
-	public void setRef_step(int ref_step) {
-		this.ref_step = ref_step;
+	public void setRe_step(int ref_step) {
+		this.re_step = ref_step;
 	}
 	public int getRe_level() {
 		return re_level;

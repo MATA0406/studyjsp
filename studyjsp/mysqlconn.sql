@@ -21,3 +21,44 @@ insert into member(id, passwd, name, reg_date, address, tel)
 values('1234','1234','1234',sysdate,'서울시','010-1234-4321');
 
 commit;
+
+
+
+
+create table memberr(
+    num number not null primary key,
+    name varchar2(15) not null,
+    tel varchar2(20) not null,
+    subject varchar2(20),
+    constraint mem_FK foreign key(subject) REFERENCES class(subjectname)
+);
+
+create table class(
+    cnum number not null primary key,
+    subjectname varchar2(15) unique,
+    teacher varchar2(15) not null,
+    count number not null
+);
+
+insert into memberr(num,name,tel,subject)
+   values('1','정진호','01057220406','수영');
+
+select * from memberr;
+
+update memberr set tel='01011111111' where num=1;
+
+delete from memberr where num=1;
+
+commit;
+
+
+
+
+
+
+
+
+
+
+
+

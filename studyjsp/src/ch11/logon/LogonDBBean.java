@@ -243,7 +243,7 @@ public class LogonDBBean {
 	   
 	   //회원탈퇴처리(deletePro.jsp)에서 회원 정보를 삭제하는 메소드
 	   public int deleteMember(String id, String passwd) {
-	      Connection conn = null;
+		  Connection conn = null;
 	      PreparedStatement pstmt = null;
 	      ResultSet rs = null;
 	      int x = -1;
@@ -264,7 +264,9 @@ public class LogonDBBean {
 	               pstmt = conn.prepareStatement("delete from member where id=?");
 	               pstmt.setString(1, id);
 	               pstmt.executeQuery();
+	             
 	               x=1; //회원탈퇴처리 성공
+	               System.out.println(x);
 	            }else
 	               x=0; //회원탈퇴처리 실패
 	         }

@@ -5,11 +5,14 @@
 <link rel="stylesheet" href="../css/style.css"/>
 <script src="../js/jquery-3.3.1.min.js"></script>
 
-<div id="main_user_cert" class="box2">
-	<div id="main_image" class="box">
-	<img class="noborder" id="logo" src="../images/mollahalf.png"/></div>
-	<div id="main_auth" class="box"><jsp:include page="loginForm.jsp"/></div>
-</div>
-<div id="main_board" class="box2"><jsp:include page="main_board.jsp"/></div>
+<%
+	String id = "";
+	try{
+		id = (String)session.getAttribute("id");
+%>
 
-
+<%if(id == null || id.equals("")){%>
+<div id="display_board" class="box2">로그인하세요! 게시판은 회원만 볼 수 있습니다.</div>
+<%}else{%>
+<div id="display_board" class="box2"><jsp:include page="list.jsp"/></div>
+<%}}catch(Exception e){e.printStackTrace();}%>
