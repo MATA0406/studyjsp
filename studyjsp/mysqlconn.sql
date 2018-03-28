@@ -15,10 +15,10 @@ tel varchar2(20) not null);
 
 
 insert into member(id, passwd, name, reg_date, address, tel)
-values('wlsgh46','1234','Á¤ÁøÈ£',SYSDATE,'¼­¿ï½Ã','010-1111-1111');
+values('wlsgh46','1234','ï¿½ï¿½ï¿½ï¿½È£',SYSDATE,'ï¿½ï¿½ï¿½ï¿½ï¿½','010-1111-1111');
 
 insert into member(id, passwd, name, reg_date, address, tel)
-values('1234','1234','1234',sysdate,'¼­¿ï½Ã','010-1234-4321');
+values('1234','1234','1234',sysdate,'ï¿½ï¿½ï¿½ï¿½ï¿½','010-1234-4321');
 
 commit;
 
@@ -41,7 +41,7 @@ create table class(
 );
 
 insert into memberr(num,name,tel,subject)
-   values('1','Á¤ÁøÈ£','01057220406','¼ö¿µ');
+   values('1','ï¿½ï¿½ï¿½ï¿½È£','01057220406','ï¿½ï¿½ï¿½ï¿½');
 
 select * from memberr;
 
@@ -51,6 +51,7 @@ delete from memberr where num=1;
 
 commit;
 
+select * from student;
 
 
 
