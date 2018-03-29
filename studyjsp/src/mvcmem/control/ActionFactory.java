@@ -1,7 +1,9 @@
 package mvcmem.control;
 
 import mvcmem.action.Action;
+import mvcmem.action.IdCheckAction;
 import mvcmem.action.IndexAction;
+import mvcmem.action.RegFormAction;
 
 public class ActionFactory { // 명령어에 해당하는 실제 액션을 생성해줄 Factory
 	private static ActionFactory factory;
@@ -19,7 +21,7 @@ public class ActionFactory { // 명령어에 해당하는 실제 액션을 생�
 	public Action getAction(String cmd) {
 		Action action = null;
 		switch(cmd) {
-		case "index":
+	case "index":
 			action = new IndexAction();
 			break;
 		/*case "login":
@@ -30,11 +32,11 @@ public class ActionFactory { // 명령어에 해당하는 실제 액션을 생�
 			break;
 		case "logout":
 			action = new LogoutAction();
-			break;
+			break;*/
 		case "regForm":
-			action = new regFormAction();
+			action = new RegFormAction();
 			break;
-		case "regProc":
+		/*case "regProc":
 			action = new regProcAction();
 			break;
 		case "modifyForm":
@@ -48,11 +50,11 @@ public class ActionFactory { // 명령어에 해당하는 실제 액션을 생�
 			break;
 		case "deleteProc":
 			action = new deleteProcAction();
-			break;
+			break;*/
 		case "idCheck":
-			action = new idCheckAction();
+			action = new IdCheckAction();
 			break;
-		case "ZipCheck":
+		/*case "ZipCheck":
 			action = new ZipCheckAction();
 			break;*/
 		}
