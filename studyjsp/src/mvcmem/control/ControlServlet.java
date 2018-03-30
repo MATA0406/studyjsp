@@ -23,7 +23,7 @@ public class ControlServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-
+    // 명령어를 받아서 액션 팩토리로 보낸 뒤 처리후 다시 돌아와 처리
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		response.setContentType("text/html;charset=utf-8");
@@ -31,12 +31,13 @@ public class ControlServlet extends HttpServlet {
 		if(cmd != null) {
 			ActionFactory factory = ActionFactory.getInstance();
 			Action action = factory.getAction(cmd);
+			System.out.println(cmd);
 			ActionForward af = action.execute(request, response);
 			if(af.isRedirect()) {
-				response.sendRedirect(af.getUrl());
+				response.sendRedirect(af.getUrl()); //리다이렉트
 			}else {
 				RequestDispatcher rd = request.getRequestDispatcher(af.getUrl());
-				rd.forward(request, response);
+				rd.forward(request, response); // 포워딩
 			}
 		}else {
 			PrintWriter out = response.getWriter();

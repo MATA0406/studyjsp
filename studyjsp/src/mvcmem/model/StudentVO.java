@@ -13,6 +13,8 @@ public class StudentVO {
 	private String address2;
 	
 	// 생성자
+	public StudentVO() {}
+	
 	public StudentVO(String id, String pass, String name, String phone1, String phone2, String phone3, String email, String zipcode, String address1, String address2) {
 		this.id = id;
 		this.pass = pass;

@@ -44,7 +44,7 @@
 		</tr>
 		<tr>
 			<td align="right">아이디: </td>
-			<td><input class="form-control" type="text" name="id" size="20"/>&nbsp;
+			<td><input class="form-control" type="text" name="id" size="20" />&nbsp; <!-- required -->
 			<input class="btn btn-primary" type="button" value="중복확인" onclick="idCheck(this.form.id.value)"/></td>
 		</tr>
 		<tr>

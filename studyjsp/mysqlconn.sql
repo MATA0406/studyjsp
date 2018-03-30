@@ -53,10 +53,13 @@ commit;
 
 select * from student;
 
+select * from ZIPCODE;
 
+commit;
 
+select * from zipcode where dong like '논현%';
 
-
+select * from board;
 
 
 

@@ -9,7 +9,6 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-  
   <jsp-config>
     <taglib>
       <taglib-uri>/WEB-INF/tlds/el-functions.tld</taglib-uri>
@@ -18,14 +17,12 @@
   	</taglib-location>
     </taglib>
   </jsp-config>
-  
   <servlet>
-  	<servlet-name>myControl</servlet-name>
-  	<servlet-class>mvcmem.control.ControlServlet</servlet-class>
+    <servlet-name>myControl</servlet-name>
+    <servlet-class>mvcmem.control.ControlServlet</servlet-class>
   </servlet>
   <servlet-mapping>
-  	<servlet-name>myControl</servlet-name>
-  	<url-pattern>*.mdo</url-pattern>
+    <servlet-name>myControl</servlet-name>
+    <url-pattern>*.mdo</url-pattern>
   </servlet-mapping>
-  
 </web-app>

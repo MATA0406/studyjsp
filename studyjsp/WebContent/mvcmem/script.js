@@ -24,17 +24,17 @@ function zipCheck(){
 function inputCheck(){
 	var theForm = document.regForm;
 	
-	if(!theForm.id.value){
+	/*if(!theForm.id.value){
 		alert("아이디를 입력해 주세요.");
 		theForm.id.focus();
 		return;
-	}
+	}*/
 	if(!theForm.pass.value){
 		alert("비밀번호를 입력해 주세요.");
 		theForm.pass.focus();
 		return;
 	}
-	if(!theForm.repass.value==""){
+	if(!theForm.repass.value){
 		alert("비밀번호를 확인해 주세요.");
 		theForm.repass.focus();
 		return;
@@ -44,27 +44,27 @@ function inputCheck(){
 		theForm.repass.focus();
 		return;
 	}
-	if(!theForm.name.value==""){
+	if(!theForm.name.value){
 		alert("이름을 입력해 주세요.");
 		theForm.name.focus();
 		return;
 	}
-	if(theForm.phone1.value==""){
+	if(!theForm.phone1.value){
 		alert("통신사를 입력해 주세요.");
 		theForm.phone1.focus();
 		return;
 	}
-	if(theForm.phone2.value==""){
+	if(!theForm.phone2.value){
 		alert("전화번호 앞자리를 입력해 주세요.");
 		theForm.phone2.focus();
 		return;
 	}
-	if(theForm.phone3.value==""){
+	if(!theForm.phone3.value){
 		alert("전화번호 뒷자리를 입력해 주세요.");
 		theForm.phone3.focus();
 		return;
 	}
-	if(theForm.email.value==""){
+	if(!theForm.email.value){
 		alert("이메일을 입력해 주세요.");
 		theForm.email.focus();
 		return;
@@ -79,17 +79,17 @@ function inputCheck(){
 		return;
 	}
 	
-	if(theForm.zipcode.value==""){
+	if(!theForm.zipcode.value){
 		alert("우편번호를 입력해 주세요.");
 		theForm.zipcode.focus();
 		return;
 	}
-	if(theForm.address1.value==""){
+	if(!theForm.address1.value){
 		alert("주소를 입력해 주세요.");
 		theForm.address1.focus();
 		return;
 	}
-	if(theForm.address2.value==""){
+	if(!theForm.address2.value){
 		alert("세부 주소를 입력해 주세요.");
 		theForm.address2.focus();
 		return;
