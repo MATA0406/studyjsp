@@ -25,4 +25,17 @@
     <servlet-name>myControl</servlet-name>
     <url-pattern>*.mdo</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>controller</servlet-name>
+    <servlet-class>board.controller.ControllerAction</servlet-class>
+    <init-param>
+    	<param-name>propertyConfig</param-name>
+    	<param-value>CommandPro.properties</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>controller</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -61,8 +61,13 @@ select * from zipcode where dong like '논현%';
 
 select * from board;
 
+select * from(select rownum rnum, num, writer, subject, pass, regdate, readcount, ref, step, depth, content, ip, email from(select * from board order by ref desc, step asc)) where rnum>=1 and rnum<=3);
 
+alter table board add(email varchar2(100));
 
-
-
+alter table board rename column reg_date to regdate;
+alter table board rename column passwd to pass;
+alter table board rename column re_step to step;
+alter table board rename column re_level to depth;
+commit;
 

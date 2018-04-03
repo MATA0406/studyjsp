@@ -25,6 +25,7 @@ public class ControllerAction extends HttpServlet {
 	
 	// 명령어와 처리클래스가 매핑되어 있는 properties 파일을 읽어서 Map 객체인 commandMap에 저장
 	// 명령어와 처리클래스가 매핑되어 있는 properties 파일은 Command.properties파일
+	@SuppressWarnings("unchecked")
 	public void init(ServletConfig config)throws ServletException{
 		// web.xml에서 propertyConfig에 해당하는 init-param의 값을 읽어옴
 		String props = config.getInitParameter("propertyConfig");  // CommandPro.properties

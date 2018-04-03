@@ -12,7 +12,7 @@
 		<tr><td><b>표현식</b></td><td><b>값</b></td></tr>
 		<tr><td><b>\${2+5 }</b></td><td><b>${2+5 }</b></td></tr>
 		<tr><td><b>\${4/5 }</b></td><td><b>${4/5 }</b></td></tr>
-		<tr><td><b>\${5 div 6 }</b></td><td><b>${5 div 6 }</b></td></tr>
+		
 		<tr><td><b>\${5 mod 7 }</b></td><td><b>${5 mod 7 }</b></td></tr>
 		<tr><td><b>\${2<3 }</b></td><td><b>${2<3 }</b></td></tr>
 		<tr><td><b>\${2 gt 3 }</b></td><td><b>${2 gt 3 }</b></td></tr>

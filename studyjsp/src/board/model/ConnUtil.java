@@ -7,7 +7,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.sql.DataSource;
 
-public class CunnUtil {
+public class ConnUtil {
 	private static DataSource ds;
 	static {
 		try {
